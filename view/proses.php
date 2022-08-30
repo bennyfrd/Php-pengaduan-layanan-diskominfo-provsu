@@ -2,9 +2,6 @@
 session_start();
 require("register.php");
 
-
-
-
 if($_SESSION["code"] == $_POST["kode"]){
 
 

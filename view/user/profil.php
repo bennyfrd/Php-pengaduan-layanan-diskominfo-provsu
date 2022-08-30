@@ -12,7 +12,9 @@ if(isset($_POST['konfirmasi'])){
 if(isset($_POST['ubah_pass'])){
   ubah_pass_user($data['nik'], $_POST['pass1'], $_POST['pass2'], $_POST['pass_now']);
 }
-$profil = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM masyarakat WHERE nik='$data[nik]' "));
+
+$profil = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM user WHERE nik='$data[nik]' "));
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
